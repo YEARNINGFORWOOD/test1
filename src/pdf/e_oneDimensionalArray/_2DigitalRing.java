@@ -38,6 +38,6 @@ public class _2DigitalRing {
         for (int i=0; i<displacement;i++){
              digitalRing[i] = copy[n-displacement+i];
         }
-        System.out.println("挞塔~" + Arrays.toString(digitalRing) );
+        System.out.println("挞塔" + Arrays.toString(digitalRing) );
     }
 }
