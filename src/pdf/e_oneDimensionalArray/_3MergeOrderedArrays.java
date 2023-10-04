@@ -137,7 +137,7 @@ public class _3MergeOrderedArrays {
 
 //        //暴力解法
 //        result = violentSolution(n,m,N,M);
-//        //不新建数组（从后往前d）
+//        //不新建数组（从后往前）
 //        result = doNotAnCreateArrayFromBackToFront(n,m,N,M);
         //新建数组（从前往后）
         result = createANewArrayFromFrontToBack(n,m,N,M);
