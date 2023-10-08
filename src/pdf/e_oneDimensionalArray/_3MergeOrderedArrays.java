@@ -1,22 +1,31 @@
 package pdf.e_oneDimensionalArray;
-//3. 合并有序数组
-//        阿伟学长终于写好了游戏背包1和背包2的排序算法, 但他发现将两个背包同时带上时, 还得合并一下排序.
-//        阿伟学长懒得再写排序了, 希望小伙伴能帮帮他完成背包的合并.
-//        设计一个程序, 输入两个有序数组, 输出一个合并后的有序数组.
-//        输入:
-//        第一行: 整数n,m 表示数组1和数组2分别有n,m个数字
-//        第二行: n个整数Ni, 表示数组1的每个元素
-//        第三行: m个整数Mi, 表示数组2的每个元素
-//        6. 多维数组
-//        (n,m<=100. 0<=Ni,Mi<=1000)
-//        输出:
-//        合并后的新数组
-//        样例输入:
-//        5 6
-//        1 3 5 7 9
-//        1 3 5 6 7 8
-//        输出:
-//        1 1 3 3 5 5 6 7 7 8 9
+/*3. 合并有序数组
+        阿伟学长终于写好了游戏背包1和背包2的排序算法, 但他发现将两个背包同时带上时, 还得合并一下排序.
+        阿伟学长懒得再写排序了, 希望小伙伴能帮帮他完成背包的合并.
+        设计一个程序, 输入两个有序数组, 输出一个合并后的有序数组.
+        输入:
+        第一行: 整数n,m 表示数组1和数组2分别有n,m个数字
+        第二行: n个整数Ni, 表示数组1的每个元素
+        第三行: m个整数Mi, 表示数组2的每个元素
+        6. 多维数组
+        (n,m<=100. 0<=Ni,Mi<=1000)
+        输出:
+        合并后的新数组
+        样例输入:
+        5 6
+        1 3 5 7 9
+        1 3 5 6 7 8
+        输出:
+        1 1 3 3 5 5 6 7 7 8 9*/
+
+/*
+*
+ *
+ *
+ * 这就是绿色
+ *
+ *
+*/
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -135,13 +144,27 @@ public class _3MergeOrderedArrays {
             M[i] = sc.nextInt();
         }
 
-//        //暴力解法
-//        result = violentSolution(n,m,N,M);
-//        //不新建数组（从后往前d）
-//        result = doNotAnCreateArrayFromBackToFront(n,m,N,M);
-        //新建数组（从前往后）
-        result = createANewArrayFromFrontToBack(n,m,N,M);
-        System.out.println(Arrays.toString(result));
+        System.out.println("我用了三种解法实现哦，快夸夸我✧(✿◡‿◡)");
+        System.out.println("你想要怎么实现嘞");
+        while (true){
+            System.out.println("1.暴力解法 2.不新建数组（从后往前） 3.新建数组（从前往后） 4.退出");
+            int i = sc.nextInt();
+            if (i == 1){
+                //暴力解法
+                result = violentSolution(n,m,N,M);
+                System.out.println(Arrays.toString(result));
+            }else if (i == 2){
+                //不新建数组（从后往前）
+                result = doNotAnCreateArrayFromBackToFront(n,m,N,M);
+                System.out.println(Arrays.toString(result));
+            } else if (i == 3) {
+                //新建数组（从前往后）
+                result = createANewArrayFromFrontToBack(n,m,N,M);
+                System.out.println(Arrays.toString(result));
+            }else {
+                break;
+            }
+        }
     }
 
 }
